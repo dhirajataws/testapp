@@ -2,5 +2,6 @@ import { fileRead } from './fileRead';
 
 export type IMain = () => void
 export const main: IMain = () => {
-  return (fileRead !== undefined)
+  const output = (fileRead !== undefined)
+  return output;
 }
