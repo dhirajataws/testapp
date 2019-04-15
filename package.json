@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "start": "./dist/main.js",
+    "build": "tsc",
+    "start:dev": "npm run build && npm start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/dhirajataws/testapp/issues"
   },
-  "homepage": "https://github.com/dhirajataws/testapp#readme"
+  "homepage": "https://github.com/dhirajataws/testapp#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.4",
+    "jest": "^24.7.1",
+    "ts-jest": "^24.0.2",
+    "typescript": "^3.4.3"
+  }
 }
