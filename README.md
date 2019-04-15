@@ -5,3 +5,6 @@ Components proposed:
 2. fetchCoordinates : Fetch coordinates of the ips provided
 3. fetchForcast : Fetch whether conditions
 4. create output file
+
+Limitation:
+node version 10+

@@ -1,7 +1,14 @@
-import { fileRead } from './fileRead';
+import {
+  asyncGenerator,
+} from './fileRead';
+import { parseLine } from './parseLine';
 
-export type IMain = () => void
-export const main: IMain = () => {
-  const output = (fileRead !== undefined)
-  return output;
+export type IController = () => void
+
+export const controller: IController = () => {
+  (async function () {
+    for await (let line of asyncGenerator()) {
+      parseLine(line)
+    }
+  })();
 }
