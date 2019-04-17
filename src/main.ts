@@ -9,11 +9,11 @@ export type IController = () => void
 export const controller: IController = () => {
   (async function () {
     for await (let line of asyncGenerator()) {
-      const ipAddress: string = parseLine(line) // TODO error handling for parsing failed
+      const ipAddress: string = parseLine(line)[0] // TODO error handling for parsing failed
       const coordinates = await fetchCoordinates(ipAddress)
-      console.log(coordinates)
+      // fetch temperatures
+      // add temp into data
     }
   })();
 }
-
 controller()
