@@ -1,4 +1,9 @@
-import { parseLine } from "../src/parseLine";
+import {
+  parseLine,
+  reducer,
+  findMaxTemp
+} from "../src/utils";
+var testData = require('./testData.json')
 
 describe("parseLine", () => {
   it("module should exist", () => {
@@ -16,5 +21,30 @@ describe("parseLine", () => {
     } catch (err) {
       expect(err.message).toEqual("IPADDRESS_NOT_FOUND");
     }
+  })
+})
+
+describe("reducer", () => {
+  it("module should exist", () => {
+    expect(reducer).toBeDefined();
+  })
+  it("should return -200", () => {
+    expect(reducer({}, 0)).toEqual(-200)
+  })
+  it("should return greater temp", () => {
+    expect(reducer(50, {
+      main: {
+        temp: 51
+      }
+    })).toEqual(51);
+  })
+})
+
+describe("findMaxTemp", () => {
+  it("module should exist", () => {
+    expect(findMaxTemp).toBeDefined();
+  })
+  it("should return max temp from list", () => {
+    expect(findMaxTemp(testData)).toEqual(288.12)
   })
 })

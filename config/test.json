@@ -1,3 +1,4 @@
 {
-  "ipGeoLocationApiUrl": "https://api.ipgeolocation.io/ipgeo"
+  "ipGeoLocationApiUrl": "https://api.ipgeolocation.io/ipgeo",
+  "weatherApiUrl": "api.openweathermap.org/data/2.5/forecast/hourly"
 }

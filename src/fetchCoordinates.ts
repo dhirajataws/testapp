@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import config from "config";
 
-type IFetchCoordinates = (ipAddress: string) => void
+type IFetchCoordinates = (ipAddress: string) => Promise<any>
 
 export const getTargetUrl = (
   {
@@ -19,10 +19,10 @@ export const fetchCoordinates: IFetchCoordinates = async (
   ipAddress: string) => {
   let targetUrl: string = config.get("ipGeoLocationApiUrl")
   if (!targetUrl)
-    throw new Error("GEO_LOCATION_API_NOT_DEFINED")
+    throw new Error("GEO_LOCATION_API_URL_NOT_FOUND")
   const apiKey = process.env.IP_GEOLOCATION_API_KEY
   if (!apiKey)
-    throw new Error("GEO_LOCATION_API_KEY_NOT_DEFINED")
+    throw new Error("GEO_LOCATION_API_KEY_NOT_FOUND")
 
   targetUrl = getTargetUrl({
     targetUrl,

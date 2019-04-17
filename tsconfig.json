@@ -3,6 +3,7 @@
     "baseUrl": ".",
     "outDir": "./dist",
     "module": "commonjs",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "target": "es6",
     "sourceMap": true,

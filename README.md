@@ -16,9 +16,15 @@ Components proposed:
 
 Limitation:
 node version 10+
+Weather api is not very efficient. Unnecessary processing required over 96 set of data. Better api can be used.
+common component can be created for fetch url. 
 
+Technical debt:
+1. weather api is not efficient.
+2. TODO's
 Configuration Required:
 export IP_GEOLOCATION_API_KEY=*****
+export WEATHER_API_KEY=******
 
 # Test Scenario:
 1. line in a file is not formatted correctly

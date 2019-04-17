@@ -24,6 +24,7 @@
     "@types/config": "0.0.34",
     "@types/fetch-mock": "^7.2.3",
     "@types/jest": "^24.0.11",
+    "@types/moment": "^2.13.0",
     "@types/node": "^11.13.4",
     "@types/node-fetch": "^2.3.2",
     "config": "^3.1.0",
@@ -33,6 +34,7 @@
     "typescript": "^3.4.3"
   },
   "dependencies": {
+    "moment": "^2.24.0",
     "node-fetch": "^2.3.0"
   }
 }
