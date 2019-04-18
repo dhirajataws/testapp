@@ -1,8 +1,8 @@
 import fetch from 'node-fetch';
 import config from "config";
-
-type IFetchCoordinates = (ipAddress: string) => Promise<any>
-
+interface IFetchCoordinates {
+  (ipAddress: string): Promise<any>
+}
 export const getTargetUrl = (
   {
     targetUrl,

@@ -1,8 +1,9 @@
 import fetch from 'node-fetch';
 import config from "config";
 
-type IFetchWeather = (lat: string, lon: string) => Promise<any>
-
+interface IFetchWeather {
+  (lat: string, lon: string): Promise<any>
+}
 export const getTargetUrl = (
   {
     targetUrl,

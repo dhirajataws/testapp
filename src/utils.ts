@@ -1,9 +1,11 @@
 import moment from 'moment';
+import { IErrorStruct } from "./main";
+
 export const parseLine = (line: string) => {
   const regex = /\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b/g
   const matchRegex = regex.exec(line);
   if (!matchRegex || matchRegex.length < 1) {
-    throw Error("IPADDRESS_NOT_FOUND");
+    throw new Error("IPADDRESS_NOT_FOUND");
   } else {
     return matchRegex
   }
@@ -29,4 +31,11 @@ export const reducer = (accumulator: any, currentValue: any) => {
 export const findMaxTemp = (input: any) =>
   input.list.filter(filterTommorrowWrapper()).reduce(reducer, 0)
 
-
+export const errorReducer = (accumulator: any, currentValue: IErrorStruct) => {
+  if (accumulator[currentValue.errorMessage]) {
+    accumulator[currentValue.errorMessage] = accumulator[currentValue.errorMessage] + 1;
+  } else {
+    accumulator[currentValue.errorMessage] = 1;
+  }
+  return accumulator
+}

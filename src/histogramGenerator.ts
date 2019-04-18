@@ -9,7 +9,6 @@ export interface IAccumulated {
 }
 
 export const reducer = (accumulated: IAccumulated, item: number) => {
-  // TODO use spread operator
   if (item <= accumulated.range[accumulated.active].max) {
     accumulated.range[accumulated.active].count = accumulated.range[accumulated.active].count + 1;
   }
