@@ -70,6 +70,6 @@ export async function main() {
     const range: IHistObject[] = await controller()
     fileWrite(range) // output result to file
   } catch (err) {
-    console.log(err.message) // TODO needs logger
+    console.log(err) // TODO needs logger
   }
 };

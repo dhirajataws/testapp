@@ -17,7 +17,7 @@ export WEATHER_API_KEY=******
 config for Geolocation api url and weather api url
 
 # Limitation:
-1. tested node version 10+
+1. tested node version 11.14.0
 2. Weather api is not very efficient. Unnecessary processing required over 96 set of data. Better api can be used.
 3. common component can be created for fetch url. 
 
@@ -38,7 +38,7 @@ config for Geolocation api url and weather api url
 
 # Test
 sample test command:
- npm run build && npm start "/Users/postgres/ricoh/testapp/sample/iot.log" "/Users/postgres/ricoh/testapp/output.txt" "5"
+ npm run build && npm start "******/testapp/sample/iot.log" "*****/testapp/sample/output.txt" "5"
 
  sample input and output file in sample folder
 
