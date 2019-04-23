@@ -5,6 +5,8 @@ export const validator = () => {
     throw new Error("MISSING_PARAMETERS")
   if (!config.get("ipGeoLocationApiUrl"))
     throw new Error("GEO_LOCATION_API_URL_NOT_FOUND")
+  if (!config.get("unit"))
+    throw new Error("CONFIG_FOR_UNIT_MISSING")
   if (!process.env.IP_GEOLOCATION_API_KEY)
     throw new Error("GEO_LOCATION_API_KEY_NOT_FOUND")
   if (!config.get("ipGeoLocationApiUrl"))

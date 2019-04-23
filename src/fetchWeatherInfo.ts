@@ -16,7 +16,10 @@ export const getTargetUrl = (
       apiKey: string,
       lat: string,
       lon: string
-    }) => `${targetUrl}?lat=${lat}&lon=${lon}&appid=${apiKey}`
+    }) => {
+  const unitOfMeasurment = config.get("unit");
+  return `${targetUrl}?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${unitOfMeasurment}`
+}
 
 export const fetchWeather: IFetchWeather = async (
   lat, lon) => {
