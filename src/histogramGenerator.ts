@@ -9,13 +9,10 @@ export interface IAccumulated {
 }
 
 export const reducer = (accumulated: IAccumulated, item: number) => {
-  if (item <= accumulated.range[accumulated.active].max) {
-    accumulated.range[accumulated.active].count = accumulated.range[accumulated.active].count + 1;
-  }
-  else {
-    accumulated.range[accumulated.active + 1].count = accumulated.range[accumulated.active + 1].count + 1;
+  while (item > accumulated.range[accumulated.active].max) {
     accumulated.active = accumulated.active + 1;
   }
+  accumulated.range[accumulated.active].count = accumulated.range[accumulated.active].count + 1;
   return accumulated
 }
 

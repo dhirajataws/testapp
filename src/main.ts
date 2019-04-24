@@ -47,7 +47,6 @@ export const controller: IController = async () => {
     console.log(`Failed line: ${item.line}
     Failure reason : ${item.errorMessage} `))
 
-
   if (maxTempArray && maxTempArray.length > 0) {
     maxTempArray.sort();
     const accumulated: IAccumulated = {
